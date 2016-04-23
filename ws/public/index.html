@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wsApp">
+<head>
+	<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<title>WallPaper Sever</title>
+</head>
+<body>
+<div class="container" ng-controller="wsController">
+	<h1>WallPaper Server</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Link</th>
+				<th>Rank</th>
+				<th>Category</th>
+				<th>Color</th>
+				<th>Tag</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input class="form-control" ng-model="image.link"></td>
+				<td><input class="form-control" ng-model="image.rank"></td>
+				<td><input class="form-control" ng-model="image.category"></td>
+				<td><input class="form-control" ng-model="image.color"></td>
+				<td><input class="form-control" ng-model="image.tag"></td>
+				<td><button class="btn btn-info" ng-click="addImage()">Add Image</button></td>
+
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+<script src="controllers/controller.js"></script>
+
+	
+</body>
+</html>
