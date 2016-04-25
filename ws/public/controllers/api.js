@@ -8,8 +8,8 @@ exports.post = function(req, res) {
     		link : req.body.link,
     		rank : req.body.rank,
     		category : req.body.category,
-    		color : req.body.category,
-    		tag : req.body.category
+    		color : req.body.color,
+    		tag : req.body.tag
     	}
     	);
     newImage.save();

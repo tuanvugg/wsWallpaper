@@ -7,7 +7,7 @@ var imageSchema = new Schema({
     category:String,
     color:String,
     tag:String
-});
+},{ versionKey: false });
 
 module.exports = mongoose.model('images', imageSchema);
 

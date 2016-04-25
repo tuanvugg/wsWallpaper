@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var api = require("./public/controllers/api.js");
+var bodyParser = require('body-parser');
 var mongoose =  require('mongoose');
 	http = require('http');
 	path = require('path');
@@ -8,10 +9,9 @@ var mongoose =  require('mongoose');
 app.set('port',process.env.PORT || 9090);
 app.listen(9090);
 app.use(express.static(path.join(__dirname, 'public')));
-app.configure(function(){
-  app.use(express.bodyParser());
-  app.use(app.router);
-});
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 
 mongoose.connect('mongodb://localhost/Wallpaper',function(err)
 {
